@@ -1,0 +1,9 @@
+<h1>Edit a task</h1>
+<%= form_for(@task) do |l| %>
+<%= l.label :title  %>
+<%= l.text_field :title, :value => @task.title %>
+<%= l.label :details  %>
+<%= l.text_field :details, :value => @task.details %>
+<%= l.submit %>
+<% end %>
+<p><%= link_to "Back to list", tasks_path %></p>
